@@ -1,16 +1,17 @@
 console.log('Run.....!');
 
-interface person {
-    name: string,
-    age: number
+enum Role {
+    ADMIN,
+    READ_ONLY
 }
 
-const person: {
-    name: string,
-    age: number
-} = {
+const person = {
     name: 'Tri',
-    age: 21
+    age: 21,
+    hobbies: ['Coding'],
+    role: Role.ADMIN
 }
 
-console.log(person.name);
+if (person.role = Role.ADMIN) {
+    console.log('yea....');
+}

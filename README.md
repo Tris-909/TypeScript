@@ -45,7 +45,11 @@ TypeScript Courses from Stephen Grider Udemy
    - Types of TypeScript run on compilation, typeof JavaScript run on runtime.
 
    - number (0 , 1, 3, -10, -1.5, 2.5,....)
-   - string ('Hi', "Hi", `Hi`);
+   - string ('Hi', "Hi", template literal);
    - boolean (true, false)
    - object
    - array (string[], number[], boolean[] or [string, number] or any[])
+   - tuples ( array with fixed type and fixed length --> [number, string], push method can't catch error in typescript with tuples: fixed array length)
+   - enum ( enum {OLD, NEW} : Automatically enumerated global constant identifiers )
+   - any ( "any" types can be literally any types, and remove benefit of TypeScript :) )
+   - union ( "union" types is basically "or" in JS --> number | string )
