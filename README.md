@@ -132,3 +132,78 @@ TypeScript Courses from Stephen Grider Udemy
          }
       }
      ```
+
+   ### Annotations with Functions and Objects
+
+   - Type Annotation for normal function :
+
+   ```
+   const add = (a: number, b: number): number => {
+      return a + b;
+   }
+   ```
+
+   - Type Annotation for anonymuos function :
+
+   ```
+   const add = (a: number, b: number): number => {
+      return a + b;
+   }
+   ```
+
+   - Function return "Void" or "Never" Type :
+     - void type is used when the function does not return anything
+
+   ```
+   const consoleSmth = (str: string): void => {
+      console.log(str)
+   }
+   ```
+
+   - Never type is used when the function was never finish running and also won't return anything
+
+   ```
+   const throwErrorPlease = (message: string): never => {
+      throw new Error(message);
+   }
+   ```
+
+   - Destructuring with annotations :
+
+   ```
+   //! Destructuring with annotations
+   const forecast = {
+       date: new Date(),
+       weather: 'Sunny'
+   }
+
+   const logWeather = ({date, weather}: {
+      date: string,
+      weather: string
+   }): void => {
+      console.log(date);
+      console.log(weather);
+   }
+   ```
+
+   - Destructuring with objects :
+
+   ```
+   const profile = {
+    name: 'alex',
+    age: 20,
+    coords: {
+        lat: 0,
+        lng: 15
+    },
+    setAge(age: number): void {
+        this.age = age;
+    }
+   }
+
+   const { age }: {age: number} = profile;
+   const { coords: { lat, lng}}: {coords: {
+      lat: number,
+      lng: number
+   }} = profile;
+   ```
