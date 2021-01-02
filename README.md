@@ -53,3 +53,82 @@ TypeScript Courses from Stephen Grider Udemy
    - enum ( enum {OLD, NEW} : Automatically enumerated global constant identifiers )
    - any ( "any" types can be literally any types, and remove benefit of TypeScript :) )
    - union ( "union" types is basically "or" in JS --> number | string )
+
+2. Type annotations and Type Inference
+
+   - Type Annotations : Developers tell TypeScript what type we want to assign to a value
+   - Type Inference : TypeScript guesses the type of a value
+
+   ### Type Annotations :
+
+   - There are some basics syntaxs for type annotations :
+
+   ```
+    // String, Number, Boolean
+    const apples: string = 'A String';
+    const wrong: boolean = false;
+    const aNumber: number = 1;
+
+    // Array
+    const numArray: number[] = [1, 2, 3];
+    const strArray: string[] = ['1', '2'];
+    const booleanArray: boolean[] = [true, false, true];
+
+    // Classes
+    class Car {
+
+    }
+    let car: Car = new Car();
+
+    // Object Literal
+    let test: {
+       test1: string;
+       test2: boolean
+    } = {
+       test1: '7/10'.
+       test2: false
+    }
+
+    // Function
+    const logNumber: (i: number) => void = (i) => {
+       console.log(i)
+    }
+   ```
+
+   - Honestly, you can remove all the type annotations above and TypeScript will still understand what each variables type are because we have something called "Type Inference". Basically "Type Inference" is when TypeScript automatically guess type of the value.
+
+   - We only use "Type Annotations" when :
+
+     - Functions that return "any" type. ince there is no way to predict what JSON.parse() will receive. This function will return "any" type
+
+     ```
+     const json = {"x": "10", "y": "20"}
+     const cordinates: {x: number; y: number} = JSON.parse(json);
+     console.log(cordinates); // {x: 10, y: 20}
+     ```
+
+     - We declare a variable on one line and initialize it later :
+
+     ```
+      let words = ['red', 'blue', 'green'];
+      let found: boolean;
+
+      for ( let i = 0; i < words.length; i++) {
+          if (words[i] === 'green') {
+              found = true;
+          }
+      }
+     ```
+
+     - Variables whose type cannot be inferred correctly
+
+     ```
+      let numbers = [-10, -1, -12];
+      let numberAboveZero: boolean | number = false;
+
+      for(let i = 0; i < numbers.length; i++) {
+         if (numbers[i] > 0) {
+            numberAboveZero = numbers[i];
+         }
+      }
+     ```
