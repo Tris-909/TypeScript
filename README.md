@@ -207,3 +207,43 @@ TypeScript Courses from Stephen Grider Udemy
       lng: number
    }} = profile;
    ```
+
+   ### Mastering Typed Arrays
+
+   - There are many types of array in TypeScript : string[], number[], or array inside array string[][] or (number | string)[]
+
+   - Why do we want to use type for arrays ?
+     - We have helper functions like pop, map, push only for array.
+     - We have an easy time manage value inside the array. So we don't accidentially add or remove a value out of an array
+     - We can have type inference when we use destructuring for array
+
+   ### Tuples in TypeScript
+
+   - Tuples (Arraylike but have many different value types inside it with specific order). Let's say you want to describe a human by an array, you will use Tuples and it will look like this :
+
+   ```
+   type Human = [string, string, boolean, number];
+   const human:Human = ['Tri', 'Vietnamese', true, 21];
+   ```
+
+   - Not really been used but good to know !
+
+   ### Interfaces
+
+   - Interfaces is used to describe an object. What property it has, what type of that property is. One small notice about interface is an object can have more props then an interface as long as they have the same props that the interface requires
+
+   ```
+   interface CarInterface {
+    name: string;
+    yearOfCreated: number;
+    isSold: boolean
+   }
+
+   const Car: CarInterface = {
+       name: 'Ford',
+       yearOfCreated: 2019,
+       isSold: true
+   }
+   ```
+
+   ### Classes
