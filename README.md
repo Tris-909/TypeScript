@@ -278,3 +278,26 @@ TypeScript Courses from Stephen Grider Udemy
    ```
 
    ### Design Patterns
+
+   #### TypeScript Configurations Compiler
+
+   - tsc --init : to create tsconfig.json
+   - In tsconfig.json file we have "rootDir" and "outDir" to tell TypeScript we our TypeScript code is (rootDir) and where it should be compiled to (outDir). After that we can run tsc -w to compile all our code in the root folder and compiled it automatically everytime we save to the build folder.
+
+   #### TYPE GUARDS for union types
+
+   - Type Guards for primitive type : number, string, boolean, symbol :
+
+   ```
+   if (typeof this.collection === "string") {
+
+   }
+   ```
+
+   - Type Guards for every other value that is created using a constructor :
+
+   ```
+   if (this.collection instanceof (Array | Object | ...)) {
+
+   }
+   ```
