@@ -301,3 +301,23 @@ TypeScript Courses from Stephen Grider Udemy
 
    }
    ```
+
+   #### A little about Enums
+
+   - Enums stands for Enumeration.
+   - Enums is basically an object with key value pairs in JS. We can use Objects over Enums but the goal of Enums is to signal other engineers to have a better understanding about the relationship of dataset inside Enum.
+   - Enums Syntax :
+
+   ```
+   enum matchResult {
+      homeWin = 'H',
+      awayWin = 'A',
+      draw = 'D'
+   }
+
+   ```
+
+   #### Generics
+
+   - Works like function arguments but for types in class/function definitions.
+   - Allow us to define a type of a property that we gonna use in the future
